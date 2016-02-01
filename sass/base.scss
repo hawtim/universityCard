@@ -1,0 +1,9 @@
+@charset "utf-8";
+@import "compass/reset";
+/*！====以上是rest样式======*/
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/utilities/sprites";
+/*=================公用资源=============*/
+.clearfix {zoom:1}
+.clearfix:after {content: ' '; display: block; clear: both;}
