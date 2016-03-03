@@ -5,4 +5,4 @@
 	<li>Demo预览</li>
 </ul>
 <h1>Demo二维码，请用手机扫描</h1>
-<p><img src= "https://raw.githubusercontent.com/hawtim/universityCard/master/1456989723.png" width="200" height="200"></p>
+<p><img src= "https://raw.githubusercontent.com/hawtim/universityCard/master/1456991042.png" width="200" height="200"></p>
