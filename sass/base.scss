@@ -4,6 +4,117 @@
 @import "compass/css3";
 @import "compass/utilities";
 @import "compass/utilities/sprites";
+
+@mixin images-ucard{background:url(../img/images-ucard/images-ucard.png) no-repeat;background-size:23.05rem 14.9rem  }
+@mixin ico-name{height:2.35rem;width:1.90rem;background-position: 0 0;}
+@mixin ico-tick{height:1.6rem;width:2.1rem;background-position: -3.5rem 0;}
+@mixin ico-card{height:1.65rem;width:2.45rem;background-position: -7.05rem 0;}
+@mixin ico-money{height:2.25rem;width:2.5rem;background-position: -10.3rem 0;}
+@mixin ico-mtm{height:12.4rem;width:23.0rem;background-position: 0 -2.5rem;}
+
 /*=================公用资源=============*/
+html{-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .clearfix {zoom:1}
 .clearfix:after {content: ' '; display: block; clear: both;}
+a, a:link{text-decoration: none;webkit-tap-highlight-color: rgba(0,0,0,0);}
+.css{-webkit-user-select:none;-webkit-appearance:none;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-user-modify:read-write-plaintext-only; }
+input{outline:none} 
+.name{position: relative;z-index:3;top:0.95rem;left:1.8rem;margin-bottom: 1.05-0.5rem;/* margin: 0.95rem 2.4rem 1.05rem 1.8rem; */@include images-ucard;@include ico-name;display: inline-block;}
+// .money{position: relative;top:0.95rem;left:1.6rem;/* margin: 0.95rem 2.15rem 1.1rem 1.6rem */;@include images-ucard;@include ico-money;display: block;}
+.id{position: relative;z-index:3;top:-2.4+5.7-1.1+0.5+0.2rem;left: 1.6rem;/* margin: 2.45rem 2.15rem 1.4rem 1.6rem; */@include images-ucard;@include ico-card;display: block;}
+.ico-arrow-right{width: 0.9rem;height: 1.4rem;position: absolute;top:2.15-0.7rem;right:1.5rem;background: transparent url(../img/images-ucard/ico-arrow-right.png) 0 0 no-repeat;background-size: 0.9rem auto;}
+.hl-v{display: block;position: absolute;z-index:999;top: 4.3rem;right:0;width: 96%;height: .1rem;background: #DEDEDC ;}
+form{display: block;width: 100%;}
+.btn{display: block;margin: 0 auto;margin-top: 6.0*0.5rem;padding:0;width: 92.75%;height: 8.4*0.5rem;@include border-radius(.9*0.5rem);background: #04BE02;text-align: center;line-height: 8.4*0.5rem;font-size: 3.6*0.5rem;font-weight:normal!important;color: #FFF; }
+button{outline:none;}
+:focus{outline: 0;}
+/*=============文档自带样式=============*/
+html{font-size: 10px;}
+
+body{font-size: 1.6rem;background: #EEEEF3;font-family:Helvetica;}
+//不同页面共用一个样式表时，有些页面有相似的部分在复用的时候直接重写不同的地方进行样式覆盖
+// ===============index.html============//
+.wrapper{width:100%;height:auto; margin: 0 auto;position: relative;background: #EEEEF3;overflow-x:hidden;}
+.hd{position: relative;z-index:1;width:100%;height: 8.7rem;background-color: #FFF;margin-top: 3.1*0.5rem;border:.1*0.5rem solid #DEDEDC;
+	form{height:auto;position: relative;}
+	// .inputname{position: absolute;top: 2.5*0.5rem;left: 10.0*0.5rem;z-index:4;font-size: 3.0*0.5rem;width:73.75%;height:3.6*0.5rem;line-height: 3.6*0.5rem;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem;}
+	.inputname{position: relative;top: 1.2rem;left: 10.0*0.5-1.8-2.45+1.9rem;font-size: 3.0*0.5rem;width:73.75%;height:3.6*0.5rem;line-height: 3.6*0.5rem;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem;}
+	// .inputid{position: absolute;top: 11.0*0.5rem;left: 10.0*0.5rem;z-index:4;font-size: 3.0*0.5rem;width:73.75%;height:3.6*0.5rem;line-height: 3.6*0.5rem;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem; }
+	.inputid{position: relative;top: 1rem;left: 10.0*0.5rem;font-size: 3.0*0.5rem;width:73.75%;height:3.6*0.5rem;line-height: 3.6*0.5rem;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem; }
+}
+
+.bd{width:100%;height: 4.3rem;position: relative;background: #FFF;margin-top: 4.0*0.5rem;border:.1*0.5rem solid #DEDEDC;
+	.alert{font-size: 1.1rem;color: #DD4040;position: absolute;top: -1.6rem;left: .95rem;}
+	.moneyAmount{position: relative;top:0.95rem;left:1.6rem;display: block;@include images-ucard; @include ico-money;}
+	input{position: absolute;z-index:999;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem;}
+	form{height:auto;position: relative;}
+	label+input{position: absolute;top: 2.3*0.5rem;left: 10.0*0.5rem;font-size: 3.0*0.5rem;width:73.75%;height:3.6*0.5rem;line-height: 3.6*0.5rem;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem }
+	select{position: absolute;top:2.3*0.5rem;left: 1.6+3.2rem;width:73.75%;height:3.6*0.5rem;line-height:3.6*0.5rem;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem;}
+}
+
+.ft{position: relative;width:100%;height: auto;
+	.tips{display: block;margin-left: 1.9*0.5rem;margin-top: 1.5*0.5rem;font-size: 2.2*0.5rem;color: #808080;}
+}
+// ==================confirm.html=====================//
+.hd-c{height:4.3rem;width: 100%;
+	a{display: block;width: 32-6rem;height:4.3rem;line-height: 4.3rem;font-size: 1.5rem;color: #000;/* position: relative;top:-3.4+1.4+0.6rem; */margin-top: -4.3+1.2rem;margin-left: 6rem;
+		.userName{margin: 0;}
+		.userId{margin-left: 3.2rem;}
+	}
+}
+.bd-c{position: relative;
+	.money{position: relative;top:0.95rem;left:1.6rem;display: block;@include images-ucard; @include ico-money;}
+	select{position: absolute;top:2.3*0.5rem;left: 5.8rem;width:73.75%;font-size:1.5rem;height:3.6*0.5rem;line-height:3.6*0.5rem;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem;}
+}
+// ================list.html===============//
+.wrapper-l{
+	margin-top: 1.5rem;
+}
+.bd-l{margin-top: 0;height:auto;}//覆盖mt2rem的样式
+.history{position: relative;width: 100%;height: auto;
+	a{width: 100%;display: block;font-size: 1.6rem;color: #000;font-weight:bold;padding-top: 1.15rem;padding-bottom: 1.25rem;padding-left: 1.6rem;line-height: 1.6rem;
+		span{padding-top: 0.8rem;display: block;font-size: 1.4rem;line-height:1.4rem;color: #808080;font-weight: normal;}
+	}
+	a:nth-of-type(1)::after, a:nth-of-type(2)::after{content:" ";display: block;position: relative;z-index:999;top: 1.25rem;right:0;width: 96%;height: .1rem;background: #DEDEDC ;}
+	a:nth-last-child(1)::after{display:none;}
+}
+.ft-l{position: relative;width: 100%;margin-top: 1.5rem;border:.1*0.5rem solid #DEDEDC;background: #FFF;
+	a{
+		display: block;width: 100%;font-size:1.6rem;font-weight: bold; height:4.3rem;
+		line-height: 4.3rem;padding-left: 1.6rem;color: #000;}
+	// .ico-arrow-right{display: block;width: 0.9rem;height: 1.4rem;
+	// 	position: relative;top:0rem;right:1.5rem;
+	// 	background: transparent url(../img/images-ucard/ico-arrow-right.png) 0 0 no-repeat;}
+
+}
+// ==========finish.html===============//
+body.finish{background: #DEDEDE;}
+.wrapper-f{position: relative;width: 100%;height:100%;}
+.hd-f{position: relative;z-index:1;width:100%;/* height: 9rem; */background: #EEEEF3;
+	.ico-bg{position: relative;left: 3.1rem;top: 2.85rem;width: 3.6rem;height: 3.6rem;@include border-radius(50%);background-color: #3FB838;}
+	.ico-tick{display: block;@include images-ucard;@include ico-tick;position: relative;left: 0.8rem;top: 1.05rem;}
+	h2{margin-left: 7.9rem;margin-top: 0rem;padding-bottom: 4.0rem;font-size: 2.2rem;}
+}
+.bd-f{
+	position: relative;width:100%;
+	.ico-mtm{display: block;@include images-ucard;@include ico-mtm;margin: 0 auto;margin-top:2.65rem;}
+	.tips{margin-top: 2.25rem;text-align: center;color: #000;font-size: 1.5rem;}
+}
+.btnf{margin-top:2.7rem;}
+
+
+
+
+
+// 媒介查询语句
+@media screen and (min-width:360px)and (max-width:374px){html{font-size:11.72875px}}
+@media screen and (min-width:375px)and (max-width:383px){html{font-size:12px}}
+@media screen and (min-width:384px)and (max-width:399px){html{font-size:12.5px}}
+@media screen and (min-width:400px)and (max-width:413px){html{font-size:12.9375px}}
+@media screen and (min-width:414px)and (max-width:423px){html{font-size:13.5px}}
+@media screen and (min-width:424px)and (max-width:479px){html{font-size:15px}}
+@media screen and (min-width:480px)and (max-width:539px){html{font-size:16.875px}}
+@media screen and (min-width:540px)and (max-width:599px){html{font-size:18.75px}}
+@media screen and (min-width:600px)and (max-width:639px){html{font-size:20px}}
+@media screen and (min-width:640px)and (max-width:719px){html{font-size:22.5px}}
+@media screen and (min-width:720px){html{font-size:25px}}
