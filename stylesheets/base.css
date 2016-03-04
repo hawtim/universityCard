@@ -48,9 +48,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /*！====以上是rest样式======*/
 /*=================公用资源=============*/
-html {
-  -webkit-tap-highlight-color: transparent; }
-
 .clearfix {
   zoom: 1; }
 
@@ -211,31 +208,33 @@ body {
     position: absolute;
     top: -1.6rem;
     left: .95rem; }
-  .bd .moneyAmount {
+  .bd .money {
     position: relative;
     top: 0.95rem;
     left: 1.6rem;
-    display: block;
+    display: inline-block;
     background: url(../img/images-ucard/images-ucard.png) no-repeat;
     background-size: 23.05rem 14.9rem;
     height: 2.25rem;
     width: 2.5rem;
     background-position: -10.3rem 0; }
-  .bd input {
-    position: absolute;
-    z-index: 999;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0.05rem; }
   .bd form {
     height: auto;
     position: relative; }
-  .bd label + input {
+  .bd a {
+    /* border:1px solid #000; */
+    position: relative;
+    display: inline-block;
+    width: 73.75%;
+    height: 1.8rem;
+    left: 2.5rem;
+    top: 0.75rem; }
+  .bd span:hover {
+    visibility: hidden; }
+  .bd .moneyAmount, .bd select {
     position: absolute;
-    top: 1.15rem;
-    left: 5rem;
-    font-size: 1.5rem;
+    top: 0rem;
+    left: 0;
     width: 73.75%;
     height: 1.8rem;
     line-height: 1.8rem;
@@ -243,17 +242,11 @@ body {
     border-top: 0;
     border-right: 0;
     border-bottom: 0.05rem; }
+  .bd .moneyAmount {
+    z-index: 999;
+    background: #FFF; }
   .bd select {
-    position: absolute;
-    top: 1.15rem;
-    left: 4.8rem;
-    width: 73.75%;
-    height: 1.8rem;
-    line-height: 1.8rem;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0.05rem; }
+    z-index: 1; }
 
 .ft {
   position: relative;

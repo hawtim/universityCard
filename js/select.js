@@ -1,0 +1,37 @@
+var $$ = function (id) {
+	return document.getElementById(id);
+}
+// 获得选择的城市
+function getSelectMoney(){
+	// 获得城市选择列表的id
+	var btnSelect = $$("select-money");
+	var curSelect = btnSelect.getElementsByTagName("span")[0];
+	var oSelect = btnSelect.getElementsByTagName("select")[0];
+	var aOption = btnSelect.getElementsByTagName("option");
+	console.log(curSelect.innerHTML);
+	console.log(oSelect.options[oSelect.selectedIndex].value);
+	// 选项改变时，将选项值写入span标签中
+	oSelect.onchange = function () {
+	var text=oSelect.options[oSelect.selectedIndex].text;
+	curSelect.innerHTML = text;
+	console.log(curSelect.innerHTML);
+	console.log(oSelect.options[oSelect.selectedIndex].value);
+}
+}
+
+function addLoadEvent(func){
+	var oldonload = window.onload;
+	//把现有的window.onload事件处理函数的值存入局部变量oldonload中
+	if(typeof window.onload !='function'){
+		window.onload = func;
+		//如果没有绑定任何函数，就像平时一样添加新函数
+	}else{
+		window.onload = function(){
+		//如果已经绑定，就把新函数追加到现有指令的末尾
+			oldonload();
+			func();
+		}
+	}
+}
+
+addLoadEvent(getSelectMoney);

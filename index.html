@@ -35,19 +35,22 @@
                 </form>
             </div>
             <div class="bd">
-                <p class="alert" id="alert" style="display:none;">姓名或学号有误</p>
-                <form action="form_action1.asp" method="get" >
-                    <!-- onmouseout="return getOptions()" -->
-                    <label class="moneyAmount">&nbsp;</label>
-                    <input type="text" name="moneyAmount" id="moneyAmount" placeholder="充值金额(元)" />
-                    <select id="momey" class="css">
-                        <!-- 默认选中充值金额选项 -->
-                      <option value ="none" selected="selected" style="color: #C7C7CD;">充值金额(元)</option>
-                      <option value ="30">30元</option>
-                      <option value ="50">50元</option>
-                      <option value ="100">100元</option>
-                      <option value ="300">300元</option>
-                    </select>
+                <em class="alert" id="alert" style="display:block;">姓名或学号有误</em>
+                <form class="form-2" id="form2" action="#" onsubmit="return validate_form(this)" method="post">
+                    <i class="money"></i>
+                    <a class="select-money" id="select-money">
+                        <span class="moneyAmount" name="moneyAmount" id="moneyAmount" style="color:#C7C7CD;" >充值金额(元)</span>
+                         <!-- onmouseout="return getOptions()" -->
+                        <select id="momey" class="css" onmouseup="return changeMoney()">
+                            <!-- option 本身没有触发事件 -->
+                             <!-- 默认选中充值金额选项 -->
+                            <option value ="none" selected="selected" style="color: #C7C7CD;">充值金额(元)</option>
+                            <option value ="30">30元</option>
+                            <option value ="50">50元</option>
+                            <option value ="100">100元</option>
+                            <option value ="300">300元</option>
+                        </select>
+                    </a>
                 </form>
             </div>
             <div class="ft">
@@ -56,6 +59,7 @@
                 <a id="tijiao" submit="submit"  class="btn" href="./pages/confirm.html" >立即充值</a>
             </div>
         </div>
+        <script src="./js/select.js"></script>
         <script src="./js/plugins.js"></script>
         <script src="./js/main.js"></script>
     </body>
