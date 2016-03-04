@@ -21,8 +21,12 @@ function getSelectMoney(){
 	curSelect.style.color="#000";
 	console.log(curSelect.innerHTML);
 	console.log(oSelect.options[oSelect.selectedIndex].value);
+	}
 }
-}
+
+// function recoverStatus(){
+	
+// }
 
 function addLoadEvent(func){
 	var oldonload = window.onload;
