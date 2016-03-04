@@ -1,9 +1,13 @@
 var $$ = function (id) {
+	//检查浏览器是否支持函数中使用到的DOM方法
+	if(!document.getElementById) return false;
 	return document.getElementById(id);
 }
-// 获得选择的城市
+// 获得选择的金额
 function getSelectMoney(){
-	// 获得城市选择列表的id
+	//检查浏览器是否支持函数中使用到的DOM方法
+	if(!document.getElementsByTagName) return false;
+	// 获得金额选择列表的id
 	var btnSelect = $$("select-money");
 	var curSelect = btnSelect.getElementsByTagName("span")[0];
 	var oSelect = btnSelect.getElementsByTagName("select")[0];
@@ -14,6 +18,7 @@ function getSelectMoney(){
 	oSelect.onchange = function () {
 	var text=oSelect.options[oSelect.selectedIndex].text;
 	curSelect.innerHTML = text;
+	curSelect.style.color="#000";
 	console.log(curSelect.innerHTML);
 	console.log(oSelect.options[oSelect.selectedIndex].value);
 }

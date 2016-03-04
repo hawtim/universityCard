@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-        <meta content="yes" name="apple-mobile-web-app-capable">
-        <meta content="black" name="apple-mobile-web-app-status-bar-style">
-        <meta content="telephone=no" name="format-detection">
-        <meta content="email=no" name="format-detection">
-        <title>校园卡充值</title>
-        <meta name="description" content="">
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="../stylesheets/base.css?=123">
-    </head>
-    <body class="confirm">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>校园卡充值</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/base.css?=123">
+</head>
+<body class="confirm">
     <div class="wrapper wrapper-c">
         <div class="hd hd-c">
             <i class="name"></i>
@@ -22,18 +22,29 @@
             <i class="ico-arrow-right"></i>
         </div>
         <div class="bd bd-c">
-            <i class="money"></i>
-            <select class="css">
-              <option value ="none" disable="disable" style="color: #c7c7cd;">充值金额(元)</option>
-              <option value ="30">30元</option>
-              <option value ="50">50元</option>
-              <option value="100">100元</option>
-              <option value="300">300元</option>
-            </select>
+            <form class="form-2" id="form2" action="#" onsubmit="return validate_form(this)" method="post">
+                <!-- ico money -->
+                <i class="money"></i>
+                <!-- 整个select模仿代码 -->
+                <a class="select-money" id="select-money">
+                    <span class="moneyAmount" name="moneyAmount" id="moneyAmount" style="color:#C7C7CD;" >充值金额(元)</span>
+                     <!-- onmouseout="return getOptions()" -->
+                    <select id="momey" class="css" onmouseup="return getSelectMoney()">
+                        <!-- option 本身没有触发事件 -->
+                         <!-- 默认选中充值金额选项 -->
+                        <option value ="none" selected="selected" style="color: #C7C7CD;">充值金额(元)</option>
+                        <option value ="30">30元</option>
+                        <option value ="50">50元</option>
+                        <option value ="100">100元</option>
+                        <option value ="300">300元</option>
+                    </select>
+                </a>
+            </form>
         </div>
         <div class="ft">
             <p class="tips">到账时间: 立即到账</p>
             <a id="submit" class="btn" href="../pages/finish.html" >立即充值</a>
         </div>
     </div>
+<script src="../js/select.js"></script>
 </body>
