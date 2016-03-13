@@ -1,66 +1,65 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-        <meta content="yes" name="apple-mobile-web-app-capable">
-        <meta content="black" name="apple-mobile-web-app-status-bar-style">
-        <meta content="telephone=no" name="format-detection">
-        <meta content="email=no" name="format-detection">
-        <title>校园卡充值</title>
-        <meta name="description" content="">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="./stylesheets/base.css?=123">
-    </head>
-    <body>
-         <!-- Add your site or application content here -->
-        <div class="wrapper">
-            <div class="hd ">
-                <form action="form_action.asp" method="get">
-                    <label class="name" for="name">&nbsp;</label>
-                    <!-- 限定了输入中文和英文 -->
-                    <!-- js 监视输入框变化的动作 -->
-                    <!--    oninput="return myFunction()" -->
-                    <!-- onpropertychange="return myFunction()" -->
-                    <!-- onchange="return myFunction()" -->
-                    <input class="inputname" onkeyup="value=value.replace(/[\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))"
-                    type="text" name="name" id="name" placeholder="姓名" value="" min="3" max="10" />
-                    <span class="hl hl-v"></span>
-                    <label class="id" for="id">&nbsp;</label>
-                    <!-- 限定了输入数字和字母 -->
-                    <input class="inputid" type="text"  onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" name="id" id="id" placeholder="学号" value="" min="3" max="10" />
-                </form>
-            </div>
-            <div class="bd">
-                <em class="alert" id="alert" style="display:block;">姓名或学号有误</em>
-                <form class="form-2" id="form2" action="#" onsubmit="return validate_form(this)" method="post">
-                    <i class="money"></i>
-                    <a class="select-money" id="select-money" touchend="return getSelectMoney()">
-                        <span class="moneyAmount" name="moneyAmount" id="moneyAmount" style="color:#C7C7CD;" >充值金额(元)</span>
-                         <!-- onmouseout="return getOptions()" -->
-                        <select id="momey" class="css" >
-                            <!-- option 本身没有触发事件 -->
-                             <!-- 默认选中充值金额选项 -->
-                            <!-- <option value ="none" selected="selected" style="color: #C7C7CD;">充值金额(元)</option> -->
-                            <option value ="30">30元</option>
-                            <option value ="50">50元</option>
-                            <option value ="100">100元</option>
-                            <option value ="300">300元</option>
-                        </select>
-                    </a>
-                </form>
-            </div>
-            <div class="ft">
-                <p class="tips">到账时间: 立即到账</p>
-                <!-- onclick="return myFunction()" -->
-                <a id="tijiao" submit="submit"  class="btn" href="./pages/confirm.html" >立即充值</a>
-            </div>
+<html lang="zh-cn"class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>校园卡充值</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,
+    user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="./stylesheets/base.css?=123">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="hd ">
+            <form action="#" method="post">
+                <label class="name" for="name">&nbsp;</label>
+                <!-- 限定了输入中文和英文 -->
+                <!-- js 监视输入框变化的动作 -->
+                <!--    oninput="return myFunction()" -->
+                <!-- onpropertychange="return myFunction()" -->
+                <!-- onchange="return myFunction()" -->
+                <input class="inputname"
+                onkeyup="value=value.replace(/[\d]/g,'') "
+                onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))"
+                type="text" name="name" id="name" placeholder="姓名" value="" min="3" >
+                <span class="hl hl-v"></span>
+                <label class="id" for="id">&nbsp;</label>
+                <!-- 限定了输入数字和字母 -->
+                <input class="inputid" type="text"  onkeyup="value=value.replace(/[^\w\.\/]/ig,'')"
+                name="id" id="id" placeholder="学号" value="" min="3" >
+            </form>
         </div>
-        <script src="./js/select.js"></script>
-        <script src="./js/plugins.js"></script>
-        <script src="./js/main.js"></script>
-    </body>
+        <div class="bd">
+            <em class="alert" id="alert" style="display:none;">姓名或学号有误</em>
+            <form class="form-2" id="form2" action="#" method="post">
+                <i class="money"></i>
+                <a class="select-money" id="select-money" touchend="return getSelectMoney()">
+                    <span class="moneyamount" name="moneyAmount" id="moneyamount" style="color:#C7C7CD;" >充值金额(元)</span>
+                    <!-- onmouseout="return getOptions()" -->
+                    <select id="momey" class="css" >
+                        <!-- option 本身没有触发事件 --><!-- 默认选中充值金额选项 -->
+                        <option value ="none" selected>充值金额(元)</option>
+                        <option value ="30">30元</option>
+                        <option value ="50">50元</option>
+                        <option value ="100">100元</option>
+                        <option value ="300">300元</option>
+                    </select>
+                </a>
+            </form>
+        </div>
+        <div class="ft">
+            <p class="tips">到账时间: 立即到账</p>
+            <a id="tijiao" submit="submit"  class="btn" href="./pages/confirm.html" >立即充值</a>
+        </div>
+    </div>
+    <script src="./js/select.js"></script>
+    <script src="./js/plugins.js"></script>
+    <script src="./js/main.js"></script>
+</body>
 </html>
