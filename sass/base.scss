@@ -58,32 +58,25 @@ a:link {
 // .money{position: relative;top:0.95rem;left:1.6rem;
 // /* margin: 0.95rem 2.15rem 1.1rem 1.6rem */;
 // @include images-ucard;@include ico-money;display: block;}
-.id {
-    display: block;
-    left: 1.6rem;
-    margin: 0 0 1.4+0.55rem 0;
-    position: relative;
-    top: 2.6rem;
-    z-index: 3;
-    @include images-ucard;
-    @include ico-card;
-}
+//
+/*!====================组件模块 ========================*/
+
 .ico-arrow-right {
-    background: transparent url(../img/images-ucard/ico-arrow-right.png) 0 0 no-repeat;
-    background-size: 0.9rem auto;
-    height: 1.4rem;
     position: absolute;
     right: 1.5rem;
     top: 2.15-0.7rem;
+    height: 1.4rem;
     width: 0.9rem;
+    background: transparent url(../img/images-ucard/ico-arrow-right.png) 0 0 no-repeat;
+    background-size: 0.9rem auto;
 }
 .hl-v {
-    background: #dededc;
-    height: 0.1rem;
     position: absolute;
     right: 0;
     top: 4.3rem;
+    height: 0.1rem;
     width: 96%;
+    background: #dededc;
     z-index: 999;
 }
 form {
@@ -91,57 +84,25 @@ form {
     width: 100%;
 }
 .btn {
-    background: #04be02;
-    color: #fff; 
     display: block;
-    font-size: 3.6*0.5rem;
-    font-weight: normal!important;
+    width: 92.75%;
     height: 8.4*0.5rem;
-    line-height: 8.4*0.5rem;
     margin: 0 auto;
     margin-top: 6.0*0.5rem;
-    padding: 0;
+    color: #fff;
+    background: #04be02;
+    font-size: 3.6*0.5rem;
+    font-weight: normal!important;
+    line-height: 8.4*0.5rem;
     text-align: center;
-    width: 92.75%;@include border-radius(0.9*0.5rem);
-}
-button {
-    outline: none;
+    @include border-radius(0.9*0.5rem);
 }
 :focus {
-    outline: 0;
+    outline: none;
+    // outline: 1px dashed blue;
+    // @include transition(all 0.5s linear);
 }
-form {
-    height: auto;
-    position: relative;
 
-    span: hover {
-        visibility: hidden;
-    }
-        .moneyamount, select {
-            border: 0;
-            height: 3.6*0.5rem;
-            left: 0;
-            line-height: 3.6*0.5rem;
-            position: absolute;
-            top: 0rem;
-            width: 73.75%;
-        }
-            .moneyamount {
-                background: #fff;
-                z-index: 999;
-            }
-                select{
-                    z-index: 1;
-                }
-    a {
-        display: inline-block;
-        height: 3.6*0.5rem;
-        left: 10.0*0.5-2.5rem;
-        /* border:1px solid #000; */position: relative;
-        top: 1.5*0.5rem; 
-        width: 73.75%;
-    }
-}
 /*=============文档自带样式=============*/
 html {
     font-size: 10px;
@@ -154,111 +115,156 @@ body {
 //不同页面共用一个样式表时，有些页面有相似的部分在复用的时候直接重写不同的地方进行样式覆盖
 // ===============index.html============//
 .wrapper {
-    background: #eeeef3;
+    position: relative;
+    width: 100%;
     height: auto;
     margin: 0 auto;
+    background: #eeeef3;
     overflow-x: hidden;
-    position: relative;
-    width: 100%;
 }
 .hd {
-    background-color: #fff;
-    border: 0.1*0.5rem solid #dededc;
-    height: auto;
-    margin-top: 3.1*0.5rem;
     position: relative;
-    width: 100%;
     z-index: 1;
+    height: auto;
+    width: 100%;
+    margin-top: 3.1*0.5rem;
+    border: 0.1*0.5rem solid #dededc;
+    background-color: #fff;
     form {
-        height: auto;
         position: relative;
+        height: auto;
     }
-    // .inputname, .inputid{position: absolute;left:5rem;z-index: 4;font-size: 1.5rem;left: 73.75%;height: 1.8rem;line-height: 1.8rem;	}
+    // .inputname, .inputid{position: absolute;left:5rem;z-index: 4;font-size: 1.5rem;left: 73.75%;height: 1.8rem;line-height: 1.8rem;  }
     // .inputname{top: 2.5*0.5rem;}
     .name {
-        display: inline-block;
-        left: 1.8rem;
-        margin-bottom: 1.05-0.5rem;/* margin: 0.95rem 2.4rem 1.05rem 1.8rem; */
         position: relative;
         top: 0.95rem;
+        left: 1.8rem;
+        display: inline-block;
+        margin-bottom: 1.05-0.5rem;/* margin: 0.95rem 2.4rem 1.05rem 1.8rem; */
         z-index: 3;
         @include images-ucard;
         @include ico-name;
     }
-    // .name::after{content:"";position: absolute;z-index:999;top: 4.3rem;right:0;width: 96%;height: .1rem;background: #DEDEDC ;}
-    .inputname {
-        border: 0;
-        font-size: 3.0*0.5rem;
-        height: 3.6*0.5rem;
-        left: 10.0*0.5-1.8-2.45+1.9rem;
-        line-height: 3.6*0.5rem;
+    .id {
         position: relative;
-        top: 1.2rem;
+        top: 2.6rem;
+        left: 1.6rem;
+        display: block;
+        margin: 0 0 1.4+0.55rem 0;
+        z-index: 3;
+        @include images-ucard;
+        @include ico-card;
+    }
+    // 输入框公共样式
+    .ip{
+        position: relative;
         width: 73.75%;
+        height: 3.6*0.5rem;
+        font-size: 3.0*0.5rem;
+        line-height: 3.6*0.5rem;
+        border:0;
+        }
+    // .name::after{content:"";position: absolute;z-index:999;top: 4.3rem;right:0;width: 96%;height: .1rem;background: #DEDEDC ;}
+    .ipname {
+        top: 1.2rem;
+        left: 12.0*0.5-1.8-2.45+1.9rem;
+        height: 3.6*0.5rem;
     }
     // .inputid{top: 11.0*0.5rem;}
-    .inputid {
-        border: 0;
-        font-size: 3.0*0.5rem;
-        height: 3.6*0.5rem;
-        left: 10.0*0.5rem;
-        line-height: 3.6*0.5rem;
-        position: relative;
+    .ipid {
         top: -1rem;/* top: 0.8rem; */
-        width: 73.75%;
+        left: 12.0*0.5rem;
     }
 }
 
 .bd {
-    background: #fff;
-    border: 0.1*0.5rem solid #dededc;
-    height: 4.3rem;
-    margin-top: 4.0*0.5rem;
     position: relative;
     width: 100%;
-    .alert {
-        color: #dd4040;
-        font-size: 1.1rem;
-        left: 0.95rem;
+    height: auto;
+    margin-top: 4.0*0.5rem;
+    background: #fff;
+    border: 0.1*0.5rem solid #dededc;
+     .alert {
         position: absolute;
         top: -1.6rem;
+        left: 0.95rem;
+        color: #dd4040;
+        font-size: 1.1rem;
     }
+}
+.form-2 {
+    position: relative;
     .money {
-        display: inline-block;
-        left: 1.6rem;
         position: relative;
-        top: 0.95rem;
+        top: 0;
+        left: 1.6rem;
+        display: inline-block;
+        margin-top: 0.95rem;
+        margin-bottom: 0.85rem;
         @include images-ucard;
         @include ico-money;
     }
-    // .moneyAmount{background: #FFF; position: absolute;z-index:999;border-left:0;border-top:0;border-right:0;border-bottom:.1*0.5rem;}
+    .select-money{
+        position: absolute;
+        top: 1.4rem;
+        left: 6rem;
+        // display: block;
+        width: 73.75%;
+        height: 3.6*0.5rem;
+        line-height: 3.6*0.5rem;
+    }
+    span, select{
+        position: absolute;
+        border: 0;
+        width: 73.75%;
+        height: 3.6*0.5rem;
+        line-height: 3.6*0.5rem;
+        font-size: 1.5rem;
+    }
+    span{
+        top: 0;
+        left: 0;
+        // display: inline-block;
+        z-index: 999;
+        color:#C7C7CD;
+        background: #fff;
+    }
+    select {
+        position: relative;
+        top: 0rem;
+        left: 0;
+        z-index: 1;
+    }
+
 }
 
+
 .ft {
-    height: auto;
     position: relative;
     width: 100%;
+    height: auto;
     .tips {
-        color: #808080;
         display: block;
-        font-size: 2.2*0.5rem;
         margin-left: 1.9*0.5rem;
         margin-top: 1.5*0.5rem;
+        font-size: 2.2*0.5rem;
+        color: #808080;
     }
 }
 // ==================confirm.html=====================//
 .hd-c {
-    height: 4.3rem;
     width: 100%;
+    height: 4.3rem;
     a {
-        color: #000;/* position: relative;top:-3.4+1.4+0.6rem; */
         display: block;
-        font-size: 1.5rem;
+        width: 32-6rem;
         height: 4.3rem;
-        line-height: 4.3rem;
         margin-left: 6rem;
         margin-top: -4.3+1.2rem;
-        width: 32-6rem;
+        color: #000;/* position: relative;top:-3.4+1.4+0.6rem; */
+        font-size: 1.5rem;
+        line-height: 4.3rem;
         .username {
             margin: 0;
         }
@@ -280,16 +286,16 @@ body {
     height: auto;//覆盖mt2rem的样式
     margin-top: 0;
     .history {
-        a: nth-of-type(1)::after, a:nth-of-type(2)::after {
-            background: #dededc;
-            content: " ";
-            display: block;
-            height: 0.1rem;
+        a:nth-of-type(1)::after, a:nth-of-type(2)::after {
             position: relative;
             right: 0;
             top: 1.25rem;
-            width: 96%;
             z-index: 999;
+            content: " ";
+            display: block;
+            width: 96%;
+            height: 0.1rem;
+            background: #dededc;
         }
             a:nth-last-child(1)::after{
                 display: none;
@@ -298,78 +304,81 @@ body {
         position: relative;
         width: 100%;
         a {
-            color: #000;
             display: block;
-            font-size: 1.6rem;
-            font-weight: bold;
-            line-height: 1.6rem;
+            width: 100%;
             padding-bottom: 1.2rem;
             padding-left: 1.6rem;
             padding-top: 1.2rem;
-            width: 100%;
+            color: #000;
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 1.6rem;
             span {
-                color: #808080;
                 display: block;
+                padding-top: 0.8rem;
+                color: #808080;
                 font-size: 1.4rem;
                 font-weight: normal;
                 line-height: 1.4rem;
-                padding-top: 0.8rem;
             }
         }
     }
 }
 .ft-l {
-    background: #fff;
-    border: 0.1*0.5rem solid #dededc;
-    margin-top: 1.5rem;
     position: relative;
     width: 100%;
+    margin-top: 1.5rem;
+    background: #fff;
+    border: 0.1*0.5rem solid #dededc;
     a {
-        color: #000;
         display: block;
+        width: 100%;
+        height: 4.3rem;
+        padding-left: 1.6rem;
         font-size: 1.6rem;
         font-weight: bold;
-        height: 4.3rem;
         line-height: 4.3rem;
-        padding-left: 1.6rem;
-        width: 100%;
+        color: #000;
     }
     // .ico-arrow-right{display: block;width: 0.9rem;height: 1.4rem;
-    // 	position: relative;top:0rem;right:1.5rem;
-    // 	background: transparent url(../img/images-ucard/ico-arrow-right.png) 0 0 no-repeat;}
+    //  position: relative;top:0rem;right:1.5rem;
+    //  background: transparent url(../img/images-ucard/ico-arrow-right.png) 0 0 no-repeat;}
 }
 // ==========finish.html===============//
 body.finish {
     background: #dedede;
 }
 .wrapper-f {
-    height: 100%;
     position: relative;
     width: 100%;
+    height: 100%;
 }
 .hd-f {
-    background: #eeeef3;
     position: relative;
     width: 100%;/* height: 9rem; */
     z-index: 1;
+    background: #eeeef3;
     .ico-bg {
-        background-color: #3fb838;
-        height: 3.6rem;
-        left: 3.1rem;
         position: relative;
         top: 2.85rem;
-        width: 3.6rem;@include border-radius(50%);
+        left: 3.1rem;
+        width: 3.6rem;
+        height: 3.6rem;
+        background-color: #3fb838;
+        @include border-radius(50%);
     }
     .ico-tick {
-        display: block;
-        left: 0.8rem;
         position: relative;
-        top: 1.05rem;@include images-ucard;@include ico-tick;
+        top: 1.05rem;
+        left: 0.8rem;
+        display: block;
+        @include images-ucard;
+        @include ico-tick;
     }
     h2 {
         font-size: 2.2rem;
         margin-left: 7.9rem;
-        margin-top: 0rem;
+        margin-top: 0;
         padding-bottom: 4.0rem;
     }
 }
@@ -379,7 +388,9 @@ body.finish {
     .ico-mtm {
         display: block;
         margin: 0 auto;
-        margin-top: 2.65rem;@include images-ucard;@include ico-mtm;
+        margin-top: 2.65rem;
+        @include images-ucard;
+        @include ico-mtm;
     }
     .tips {
         color: #000;

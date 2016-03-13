@@ -10,9 +10,9 @@
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
     <meta content="email=no" name="format-detection">
-    <meta name="description" content="">
+    <meta name="description" content="校园卡充值">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="./stylesheets/base.css?=123">
+    <link rel="stylesheet" href="./stylesheets/base.css">
 </head>
 <body>
     <div class="wrapper">
@@ -24,27 +24,28 @@
                 <!--    oninput="return myFunction()" -->
                 <!-- onpropertychange="return myFunction()" -->
                 <!-- onchange="return myFunction()" -->
-                <input class="inputname"
+                <input class="ip ipname" id="name" name="name"
                 onkeyup="value=value.replace(/[\d]/g,'') "
                 onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))"
-                type="text" name="name" id="name" placeholder="姓名" value="" min="3" >
+                type="text" placeholder="姓名" value="" min="3" >
                 <span class="hl hl-v"></span>
                 <label class="id" for="id">&nbsp;</label>
                 <!-- 限定了输入数字和字母 -->
-                <input class="inputid" type="text"  onkeyup="value=value.replace(/[^\w\.\/]/ig,'')"
-                name="id" id="id" placeholder="学号" value="" min="3" >
+                <input class="ip ipid" id="id" name="id" type="text" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')"
+                placeholder="学号" value="" min="3" >
             </form>
         </div>
         <div class="bd">
             <em class="alert" id="alert" style="display:none;">姓名或学号有误</em>
             <form class="form-2" id="form2" action="#" method="post">
                 <i class="money"></i>
-                <a class="select-money" id="select-money" touchend="return getSelectMoney()">
-                    <span class="moneyamount" name="moneyAmount" id="moneyamount" style="color:#C7C7CD;" >充值金额(元)</span>
+                <a class="select-money" id="select-money" >
+                    <span class="moneyamount" name="moneyamount" id="moneyamount">充值金额(元)</span>
                     <!-- onmouseout="return getOptions()" -->
-                    <select id="momey" class="css" >
-                        <!-- option 本身没有触发事件 --><!-- 默认选中充值金额选项 -->
-                        <option value ="none" selected>充值金额(元)</option>
+                    <select class="css" id="momey">
+                        <!-- option 本身没有触发事件 -->
+                        <!-- 默认选中充值30元选项 -->
+                        <option value ="none" selected disabled>&nbsp;</option>
                         <option value ="30">30元</option>
                         <option value ="50">50元</option>
                         <option value ="100">100元</option>
@@ -55,7 +56,7 @@
         </div>
         <div class="ft">
             <p class="tips">到账时间: 立即到账</p>
-            <a id="tijiao" submit="submit"  class="btn" href="./pages/confirm.html" >立即充值</a>
+            <a class="btn" id="tijiao" submit="submit" onclick="myFunction()" href="javascript:;" >立即充值</a>
         </div>
     </div>
     <script src="./js/select.js"></script>
