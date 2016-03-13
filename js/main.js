@@ -1,78 +1,73 @@
-//  //获取下拉列表选中项的文本
-//     function getSelectedText(){
-//     	var i ;
-//         var jiner=document.getElementById("money");
-//         for(i=0;i<jiner.length;i++){
-//             if(jiner[i].selected==true){
-//                 return jiner[i].innerText;//关键是通过option对象的innerText属性获取到选项文本
-//             }
-//         }
-//     }
-// //获取下拉列表选中项的值
-//     function getSelectedValue(){
-//         var jiner=document.getElementById("money");
-//         return jiner.value;      //如此简单，直接用其对象的value属性便可获取到
-//     }
+/**
+ * @file univesityCard js file
+ * @author hawtim(hawtim_zhang@qq.com)
+*/
 
+var $$ = function (id) {
+    // 检查浏览器是否支持函数中使用到的DOM方法
+    if (!document.getElementById) {
+        return false;
+    }
 
-// var valueNumber = jiner.options[jiner.selectedIndex];
-// 	function checkOption(){
-// 	    if(window.confirm('您选择了'+valueNumber.text+',按[确定]开始升级'))
-// 	    {
-// 	   console.log(valueNumber.value);
-// 	    }
-// 	}
+    return document.getElementById(id);
+};
+/**
+ * [myFunction 条件检测和判断，当满足所有条件时，链接启用;
+ * 当不满足时，页面不跳转，同时display：block警告信息]
+ * @return {[string]} [返回字符型数据]
+ */
 
-
-// function getOptions()
-//   {
-//   var x=document.getElementById("money");
-//   var y="";
-//   var i=0;
-//   for (i=0;i<x.length;i++)
-//     {
-//     y+=x.options[i].text;
-//     y+="<br />";
-//     }
-//   console.log(y);
-//   }
-
-//以上是尝试以想要获得select的option值的js代码
-//不过均失败了，感觉上还是基础没过关
-//会继续努力。
-function hideInput(){
-	
+function myFunction() {
+    // 检测dom方法
+    if (!document.getElementById) {
+        return false;
+    }
+    // 检测dom方法
+    if (!document.getElementsByTagName) {
+        return false;
+    }
+    //<a id="tijiao" submit="submit"  class="btn" href="./pages/confirm.html" >立即充值</a>
+    var tijiao = $$('tijiao');
+    //警告信息，<em class="alert" id="alert" style="display:none;">姓名或学号有误</em>
+    var para = $$('alert');
+    //姓名输入框
+    var xingming = $$('name');
+    //学号输入框
+    var xuehao = $$('id');
+    //<a class="select-money" id="select-money" >
+    var btnSelect = $$("select-money");
+    // <span class="moneyamount" name="moneyamount" id="moneyamount">充值金额(元)</span>
+    var curSelect = btnSelect.getElementsByTagName("span")[0];
+    // <select class="css" id="momey">
+    var oSelect = btnSelect.getElementsByTagName("select")[0];
+    /*<option value ="none" selected disabled>&nbsp;</option>
+    <option value ="30">30元</option>
+    <option value ="50">50元</option>
+    <option value ="100">100元</option>
+    <option value ="300">300元</option>*/
+    var aOption = btnSelect.getElementsByTagName("option");
+    // 当前span里的文字
+    console.log(curSelect.innerHTML);
+    //金额选择框的值
+    console.log(oSelect.options[oSelect.selectedIndex].value);
+    //输出名字的值
+    console.log(xingming.value);
+    //输出学号的值
+    console.log(xuehao.value);
+/**
+ * 以下这段代码要达到的结果就是姓名和学号的布尔值都是true，
+而金额的选项的value值不为none的时候，条件成立，提交按钮的链接属性值变成可点击   oSelect.options[oSelect.selectedIndex].value
+ * [if description]
+ * @param  {[type]} xingming.value &&            xuehao.value ! [description]
+ * @return {[type]}                [description]
+ */
+    if (xingming.value && xuehao.value != 0 && oSelect.options[oSelect.selectedIndex].value != "none") {
+        tijiao.href = './pages/confirm.html';
+        para.style.display = 'none';
+    }
+    else {
+        tijiao.href = 'javascript:;';
+        para.style.display = 'block';
+        console.log('false');
+    }
 }
-
-function myFunction(){
-	if(!document.getElementById) return false;
-	if(!document.getElementsByTagName) return false;
-	var tijiao = document.getElementById("tijiao");
-	var para = document.getElementById("alert");
-	var xingming = document.getElementById("name");
-	var xuehao = document.getElementById("id");
-	var jiner = document.getElementById('moneyAmount');
-
-	// console.log(jiner.options[]);
-	// console.log(jiner.options.value);
-	console.log(xingming.value);
-	console.log(xuehao.value);
-	// if(xingming || xuehao != 1){
-	// 	tijiao.href="javascript:;";
-	// 		para.style.display = "block";
-	// 	}
-	//
-	//以下这句话想要达到的结果就是姓名和学号的布尔值都是true，
-	//而金额的选项的value值不为none的时候，条件成立&& jiner.options.value != "none" 
-	if(xingming.value && xuehao.value  && jiner.value == 1 ){
-			tijiao.href="file:///G:/wamp/www/universityCard/pages/confirm.html";
-			para.style.display = "none";
-			// console.log(jiner.options.value);
-		}else{
-			tijiao.href="javascript:;";
-			para.style.display = "block";
-			// console.log(jiner.options.value);
-			console.log("false");
-		}
-	}
-// window.onload = myFunction;
