@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*！====reset样式====== */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,7 +47,6 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
-/*！====以上是rest样式======*/
 /*=================公用资源=============*/
 .clearfix {
   zoom: 1; }
@@ -76,6 +76,33 @@ a:link {
   background: transparent url(../img/images-ucard/ico-arrow-right.png) 0 0 no-repeat;
   background-size: 0.9rem auto; }
 
+.name {
+  position: relative;
+  top: 0.95rem;
+  left: 1.8rem;
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  /* margin: 0.95rem 2.4rem 1.05rem 1.8rem; */
+  z-index: 3;
+  background: url(../img/images-ucard/images-ucard.png) no-repeat;
+  background-size: 23.05rem 14.9rem;
+  background-position: 0 0;
+  height: 2.35rem;
+  width: 1.90rem; }
+
+.id {
+  position: relative;
+  top: 2.6rem;
+  left: 1.6rem;
+  display: block;
+  margin: 0 0 1.95rem 0;
+  z-index: 3;
+  background: url(../img/images-ucard/images-ucard.png) no-repeat;
+  background-size: 23.05rem 14.9rem;
+  background-position: -6.95rem 0;
+  height: 1.65rem;
+  width: 2.45rem; }
+
 .hl-v {
   position: absolute;
   right: 0;
@@ -87,110 +114,11 @@ a:link {
 
 form {
   display: block;
-  width: 100%; }
-
-.btn {
-  display: block;
-  width: 92.75%;
-  height: 4.2rem;
-  margin: 0 auto;
-  margin-top: 3rem;
-  color: #fff;
-  background: #04be02;
-  font-size: 1.8rem;
-  font-weight: normal !important;
-  line-height: 4.2rem;
-  text-align: center;
-  -moz-border-radius: 0.45rem;
-  -webkit-border-radius: 0.45rem;
-  border-radius: 0.45rem; }
-
-:focus {
-  outline: none; }
-
-/*=============文档自带样式=============*/
-html {
-  font-size: 10px; }
-
-body {
-  background: #eeeef3;
-  font-family: Helvetica;
-  font-size: 1.6rem; }
-
-.wrapper {
-  position: relative;
   width: 100%;
-  height: auto;
-  margin: 0 auto;
-  background: #eeeef3;
-  overflow-x: hidden; }
-
-.hd {
   position: relative;
-  z-index: 1;
-  height: auto;
-  width: 100%;
-  margin-top: 1.55rem;
-  border: 0.05rem solid #dededc;
-  background-color: #fff; }
-  .hd form {
-    position: relative;
-    height: auto; }
-  .hd .name {
-    position: relative;
-    top: 0.95rem;
-    left: 1.8rem;
-    display: inline-block;
-    margin-bottom: 0.55rem;
-    /* margin: 0.95rem 2.4rem 1.05rem 1.8rem; */
-    z-index: 3;
-    background: url(../img/images-ucard/images-ucard.png) no-repeat;
-    background-size: 23.05rem 14.9rem;
-    background-position: 0 0;
-    height: 2.35rem;
-    width: 1.90rem; }
-  .hd .id {
-    position: relative;
-    top: 2.6rem;
-    left: 1.6rem;
-    display: block;
-    margin: 0 0 1.95rem 0;
-    z-index: 3;
-    background: url(../img/images-ucard/images-ucard.png) no-repeat;
-    background-size: 23.05rem 14.9rem;
-    background-position: -6.95rem 0;
-    height: 1.65rem;
-    width: 2.45rem; }
-  .hd .ip {
-    position: relative;
-    width: 73.75%;
-    height: 1.8rem;
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-    border: 0; }
-  .hd .ipname {
-    top: 1.2rem;
-    left: 3.65rem;
-    height: 1.8rem; }
-  .hd .ipid {
-    top: -1rem;
-    /* top: 0.8rem; */
-    left: 6rem; }
+  height: auto; }
 
-.bd {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin-top: 2rem;
-  background: #fff;
-  border: 0.05rem solid #dededc; }
-  .bd .alert {
-    position: absolute;
-    top: -1.6rem;
-    left: 0.95rem;
-    color: #dd4040;
-    font-size: 1.1rem; }
-
+/*！====span+select下拉框复用样式开始=== */
 .form-2 {
   position: relative; }
   .form-2 .money {
@@ -231,6 +159,15 @@ body {
     left: 0;
     z-index: 1; }
 
+/*！====span+select下拉框复用样式结束== */
+.ip {
+  position: relative;
+  width: 73.75%;
+  height: 1.8rem;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  border: 0; }
+
 .ft {
   position: relative;
   width: 100%;
@@ -241,6 +178,72 @@ body {
     margin-top: 0.75rem;
     font-size: 1.1rem;
     color: #808080; }
+  .ft .btn {
+    display: block;
+    width: 92.75%;
+    height: 4.2rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    color: #fff;
+    background: #04be02;
+    font-size: 1.8rem;
+    font-weight: normal !important;
+    line-height: 4.2rem;
+    text-align: center;
+    -moz-border-radius: 0.45rem;
+    -webkit-border-radius: 0.45rem;
+    border-radius: 0.45rem; }
+
+:focus {
+  outline: none; }
+
+/*=============文档自带样式=============*/
+html {
+  font-size: 10px; }
+
+body {
+  background: #eeeef3;
+  font-family: Helvetica;
+  font-size: 1.6rem; }
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: #eeeef3;
+  overflow-x: hidden; }
+
+.hd {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  margin-top: 1.55rem;
+  border: 0.05rem solid #dededc;
+  background-color: #fff; }
+  .hd .ipname {
+    top: 1.2rem;
+    left: 3.65rem;
+    height: 1.8rem; }
+  .hd .ipid {
+    top: -1rem;
+    /* top: 0.8rem; */
+    left: 6rem; }
+
+.bd {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  background: #fff;
+  border: 0.05rem solid #dededc; }
+  .bd .alert {
+    position: absolute;
+    top: -1.6rem;
+    left: 0.95rem;
+    color: #dd4040;
+    font-size: 1.1rem; }
 
 .hd-c {
   width: 100%;
@@ -270,9 +273,9 @@ body {
   height: auto;
   margin-top: 0; }
   .bd-l .history {
-    height: auto;
     position: relative;
-    width: 100%; }
+    width: 100%;
+    height: auto; }
     .bd-l .history a:nth-of-type(1)::after, .bd-l .history a:nth-of-type(2)::after {
       position: relative;
       right: 0;

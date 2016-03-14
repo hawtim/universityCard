@@ -2,7 +2,7 @@
  * @file univesityCard js file
  * @author hawtim(hawtim_zhang@qq.com)
 */
-
+'use strict';
 var $$ = function (id) {
     // 检查浏览器是否支持函数中使用到的DOM方法
     if (!document.getElementById) {

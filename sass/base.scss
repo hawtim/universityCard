@@ -1,7 +1,7 @@
 // 校园卡页面项目scss文件
+/*！====reset样式====== */
 @charset "utf-8";
 @import "compass/reset";
-/*！====以上是rest样式======*/
 @import "compass/css3";
 @import "compass/utilities";
 @import "compass/utilities/sprites";
@@ -55,12 +55,8 @@ a:link {
     -webkit-user-modify: read-write-plaintext-only;
     -webkit-user-select: none;
 }
-// .money{position: relative;top:0.95rem;left:1.6rem;
-// /* margin: 0.95rem 2.15rem 1.1rem 1.6rem */;
-// @include images-ucard;@include ico-money;display: block;}
-//
 /*!====================组件模块 ========================*/
-
+// 向右箭头ico
 .ico-arrow-right {
     position: absolute;
     right: 1.5rem;
@@ -69,6 +65,28 @@ a:link {
     width: 0.9rem;
     background: transparent url(../img/images-ucard/ico-arrow-right.png) 0 0 no-repeat;
     background-size: 0.9rem auto;
+}
+// 名字ico
+.name {
+    position: relative;
+    top: 0.95rem;
+    left: 1.8rem;
+    display: inline-block;
+    margin-bottom: 1.05-0.5rem;/* margin: 0.95rem 2.4rem 1.05rem 1.8rem; */
+    z-index: 3;
+    @include images-ucard;
+    @include ico-name;
+}
+// 卡号ico
+.id {
+    position: relative;
+    top: 2.6rem;
+    left: 1.6rem;
+    display: block;
+    margin: 0 0 1.4+0.55rem 0;
+    z-index: 3;
+    @include images-ucard;
+    @include ico-card;
 }
 .hl-v {
     position: absolute;
@@ -79,120 +97,14 @@ a:link {
     background: #dededc;
     z-index: 999;
 }
+// 表单
 form {
     display: block;
     width: 100%;
-}
-.btn {
-    display: block;
-    width: 92.75%;
-    height: 8.4*0.5rem;
-    margin: 0 auto;
-    margin-top: 6.0*0.5rem;
-    color: #fff;
-    background: #04be02;
-    font-size: 3.6*0.5rem;
-    font-weight: normal!important;
-    line-height: 8.4*0.5rem;
-    text-align: center;
-    @include border-radius(0.9*0.5rem);
-}
-:focus {
-    outline: none;
-    // outline: 1px dashed blue;
-    // @include transition(all 0.5s linear);
-}
-
-/*=============文档自带样式=============*/
-html {
-    font-size: 10px;
-}
-body {
-    background: #eeeef3;
-    font-family: Helvetica;
-    font-size: 1.6rem;
-}
-//不同页面共用一个样式表时，有些页面有相似的部分在复用的时候直接重写不同的地方进行样式覆盖
-// ===============index.html============//
-.wrapper {
     position: relative;
-    width: 100%;
     height: auto;
-    margin: 0 auto;
-    background: #eeeef3;
-    overflow-x: hidden;
 }
-.hd {
-    position: relative;
-    z-index: 1;
-    height: auto;
-    width: 100%;
-    margin-top: 3.1*0.5rem;
-    border: 0.1*0.5rem solid #dededc;
-    background-color: #fff;
-    form {
-        position: relative;
-        height: auto;
-    }
-    // .inputname, .inputid{position: absolute;left:5rem;z-index: 4;font-size: 1.5rem;left: 73.75%;height: 1.8rem;line-height: 1.8rem;  }
-    // .inputname{top: 2.5*0.5rem;}
-    .name {
-        position: relative;
-        top: 0.95rem;
-        left: 1.8rem;
-        display: inline-block;
-        margin-bottom: 1.05-0.5rem;/* margin: 0.95rem 2.4rem 1.05rem 1.8rem; */
-        z-index: 3;
-        @include images-ucard;
-        @include ico-name;
-    }
-    .id {
-        position: relative;
-        top: 2.6rem;
-        left: 1.6rem;
-        display: block;
-        margin: 0 0 1.4+0.55rem 0;
-        z-index: 3;
-        @include images-ucard;
-        @include ico-card;
-    }
-    // 输入框公共样式
-    .ip{
-        position: relative;
-        width: 73.75%;
-        height: 3.6*0.5rem;
-        font-size: 3.0*0.5rem;
-        line-height: 3.6*0.5rem;
-        border:0;
-        }
-    // .name::after{content:"";position: absolute;z-index:999;top: 4.3rem;right:0;width: 96%;height: .1rem;background: #DEDEDC ;}
-    .ipname {
-        top: 1.2rem;
-        left: 12.0*0.5-1.8-2.45+1.9rem;
-        height: 3.6*0.5rem;
-    }
-    // .inputid{top: 11.0*0.5rem;}
-    .ipid {
-        top: -1rem;/* top: 0.8rem; */
-        left: 12.0*0.5rem;
-    }
-}
-
-.bd {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-top: 4.0*0.5rem;
-    background: #fff;
-    border: 0.1*0.5rem solid #dededc;
-     .alert {
-        position: absolute;
-        top: -1.6rem;
-        left: 0.95rem;
-        color: #dd4040;
-        font-size: 1.1rem;
-    }
-}
+/*！====span+select下拉框复用样式开始=== */ 
 .form-2 {
     position: relative;
     .money {
@@ -236,10 +148,18 @@ body {
         left: 0;
         z-index: 1;
     }
-
 }
-
-
+/*！====span+select下拉框复用样式结束== */
+// 输入框公共样式
+.ip{
+    position: relative;
+    width: 73.75%;
+    height: 3.6*0.5rem;
+    font-size: 3.0*0.5rem;
+    line-height: 3.6*0.5rem;
+    border:0;
+    }
+// 提示和确认按钮公共样式
 .ft {
     position: relative;
     width: 100%;
@@ -251,7 +171,87 @@ body {
         font-size: 2.2*0.5rem;
         color: #808080;
     }
+    .btn {
+    display: block;
+    width: 92.75%;
+    height: 8.4*0.5rem;
+    margin: 0 auto;
+    margin-top: 6.0*0.5rem;
+    color: #fff;
+    background: #04be02;
+    font-size: 3.6*0.5rem;
+    font-weight: normal!important;
+    line-height: 8.4*0.5rem;
+    text-align: center;
+    @include border-radius(0.9*0.5rem);
+    }
 }
+
+// 获得焦点时没有外部框线
+:focus {
+    outline: none;
+    // outline: 1px dashed blue;
+    // @include transition(all 0.5s linear);
+}
+
+/*=============文档自带样式=============*/
+html {
+    font-size: 10px;
+}
+body {
+    background: #eeeef3;
+    font-family: Helvetica;
+    font-size: 1.6rem;
+}
+//不同页面共用一个样式表时，有些页面有相似的部分在复用的时候直接重写不同的地方进行样式覆盖
+// ===============index.html============//
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: #eeeef3;
+    overflow-x: hidden;
+}
+.hd {
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    margin-top: 3.1*0.5rem;
+    border: 0.1*0.5rem solid #dededc;
+    background-color: #fff;
+    // .inputname, .inputid{position: absolute;left:5rem;z-index: 4;font-size: 1.5rem;left: 73.75%;height: 1.8rem;line-height: 1.8rem;  }
+    // .inputname{top: 2.5*0.5rem;}
+    // .name::after{content:"";position: absolute;z-index:999;top: 4.3rem;right:0;width: 96%;height: .1rem;background: #DEDEDC ;}
+    .ipname {
+        top: 1.2rem;
+        left: 12.0*0.5-1.8-2.45+1.9rem;
+        height: 3.6*0.5rem;
+    }
+    // .inputid{top: 11.0*0.5rem;}
+    .ipid {
+        top: -1rem;/* top: 0.8rem; */
+        left: 12.0*0.5rem;
+    }
+}
+
+.bd {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 4.0*0.5rem;
+    background: #fff;
+    border: 0.1*0.5rem solid #dededc;
+     .alert {
+        position: absolute;
+        top: -1.6rem;
+        left: 0.95rem;
+        color: #dd4040;
+        font-size: 1.1rem;
+    }
+}
+
 // ==================confirm.html=====================//
 .hd-c {
     width: 100%;
@@ -286,6 +286,9 @@ body {
     height: auto;//覆盖mt2rem的样式
     margin-top: 0;
     .history {
+        position: relative;
+        width: 100%;
+        height: auto;
         a:nth-of-type(1)::after, a:nth-of-type(2)::after {
             position: relative;
             right: 0;
@@ -297,12 +300,7 @@ body {
             height: 0.1rem;
             background: #dededc;
         }
-            a:nth-last-child(1)::after{
-                display: none;
-            }
-        height: auto;
-        position: relative;
-        width: 100%;
+        a:nth-last-child(1)::after{display: none;}
         a {
             display: block;
             width: 100%;

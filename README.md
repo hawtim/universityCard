@@ -1,6 +1,8 @@
 <h2>项目三 校园卡充值  2016.03.03</h2>
 <h2>Demo二维码，请用手机扫描</h2>
-<p><img src= "https://raw.githubusercontent.com/hawtim/universityCard/master/1456991042.png" width="200" height="200"><a href="https://raw.githubusercontent.com/hawtim/passport_resign/master/1456991042.png">如果二维码无法加载，请点击这里</a></p>
+<p><img src= "https://raw.githubusercontent.com/hawtim/universityCard/master/1456991042.png" width="200" height="200"><br>
+	如果二维码无法加载，<a href="https://raw.githubusercontent.com/hawtim/passport_resign/master/1456991042.png">请点击这里</a></p>
+<p>在PC端预览，<a href="http://htmlpreview.github.io/?https://github.com/hawtim/universityCard/blob/master/index.html">请点击</a></p>
 <h2>此页面为仅为学习所做Demo</h2>
 <h2>改进之处</h2>
 <ul>
