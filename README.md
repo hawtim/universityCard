@@ -1,7 +1,7 @@
 <h2>项目三 校园卡充值  2016.03.03</h2>
 <h2>Demo二维码，请用手机扫描</h2>
 <p><img src= "https://raw.githubusercontent.com/hawtim/universityCard/master/1456991042.png" width="200" height="200"><br>
-	如果二维码无法加载，<a href="https://raw.githubusercontent.com/hawtim/passport_resign/master/1456991042.png">请点击这里</a></p>
+	如果二维码无法加载，<a href="https://raw.githubusercontent.com/hawtim/universityCard/master/1456991042.png">请点击这里</a></p>
 <p>在PC端预览，<a href="http://htmlpreview.github.io/?https://github.com/hawtim/universityCard/blob/master/index.html">请点击</a></p>
 <h2>此页面为仅为学习所做Demo</h2>
 <h2>改进之处</h2>
@@ -24,8 +24,8 @@
 	<h3>背景介绍</h3>
 	<p>Demo共有三个页面。一个pc，移动端为一套产品页面，一组滑屏页面，pc需要兼容IE7+。</p>
 	<ul>
-	    <li><a href="https://github.com/hawtim/universityCard">活动宣传页Demo页面</a>，如家酒店活动页面</li>
-	    <li><a href="https://github.com/hawtim/wallet_wechat">校园卡充值Demo页面</a>，充值校园卡</li>
+	    <li><a href="https://github.com/hawtim/rujiaHotel">活动宣传页Demo页面</a>，如家酒店活动页面</li>
+	    <li><a href="https://github.com/hawtim/universityCard">校园卡充值Demo页面</a>，充值校园卡</li>
 	    <li><a href="https://github.com/hawtim/passport_resign">EMS签注Demo页面</a>，通行证签注活动页面</li>
 	</ul>
 <a name="Demo介绍"></a>
@@ -38,9 +38,9 @@
 <a name="获取代码"></a>
 	<h3>获取代码</h3>
 	<dt>githubDemo主页:</dt>
-	<dd><a href="https://github.com/hawtim/oilcard">https://github.com/hawtim/oilcard</dd>
-	<dd><a href="https://github.com/hawtim/wallet_wechat">https://github.com/hawtim/wallet_wechat</dd>
-	<dd><a href="https://github.com/hawtim/world_cup_pages">https://github.com/hawtim/world_cup_pages</dd><br>
+	<dd>如家酒店活动demo:<a href="https://github.com/hawtim/rujiaHotel">https://github.com/hawtim/rujiaHotel</dd>
+	<dd>校园卡充值Demo:<a href="https://github.com/hawtim/universityCard">https://github.com/hawtim/universityCard</dd>
+	<dd>EMS签注Demo:<a href="https://github.com/hawtim/passport_resign">https://github.com/hawtim/passport_resign</dd><br>
 
 <a name="问题分析"></a>
 	<h3>问题分析</h3>
